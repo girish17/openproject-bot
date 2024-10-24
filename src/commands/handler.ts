@@ -4,7 +4,7 @@ import * as htmlEscape from "escape-html";
 
 // The prefix required to trigger the bot. The bot will also respond
 // to being pinged directly.
-export const COMMAND_PREFIX = "!bot";
+export const COMMAND_PREFIX = "!op";
 
 // This is where all of our commands will be handled
 export default class CommandHandler {
@@ -60,8 +60,8 @@ export default class CommandHandler {
                 return runHelloCommand(roomId, event, args, this.client);
             } else {
                 const help = "" +
-                    "!bot hello [user]     - Say hello to a user.\n" +
-                    "!bot help             - This menu\n";
+                    "!op hello [user]     - Say hello to a user.\n" +
+                    "!op help             - This menu\n";
 
                 const text = `Help menu:\n${help}`;
                 const html = `<b>Help menu:</b><br /><pre><code>${htmlEscape(help)}</code></pre>`;

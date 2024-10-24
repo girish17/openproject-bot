@@ -1,21 +1,21 @@
 {
-  "name": "matrix-bot-sdk-bot-template",
+  "name": "openproject-matrix-bot",
   "version": "0.1.0",
-  "author": "TravisR",
+  "author": "Girish M",
   "license": "Apache-2.0",
-  "description": "A template repository for bots made with the matrix-bot-sdk",
+  "description": "OpenProject bot for Matrix made with the matrix-bot-sdk",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/turt2live/matrix-bot-sdk-bot-template.git"
+    "url": "git+https://github.com/girish17/openproject-bot.git"
   },
   "bugs": {
-    "url": "https://github.com/turt2live/matrix-bot-sdk-bot-template/issues"
+    "url": "https://github.com/girish17/openproject-bot/issues"
   },
-  "homepage": "https://github.com/turt2live/matrix-bot-sdk-bot-template#readme",
+  "homepage": "https://github.com/girish17/openproject-bot.git#readme",
   "keywords": [
     "matrix",
     "bot",
-    "template"
+    "openproject"
   ],
   "main": "lib/index.js",
   "scripts": {
