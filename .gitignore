@@ -4,7 +4,7 @@ lib/
 storage/
 
 /.idea
-
+/.vscode/
 /db
 
 # Logs

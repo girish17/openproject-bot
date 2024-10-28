@@ -29,7 +29,6 @@ export default class CommandHandler {
     private async prepareProfile() {
         this.userId = await this.client.getUserId();
         this.localpart = new UserID(this.userId).localpart;
-
         try {
             const profile = await this.client.getUserProfile(this.userId);
             if (profile && profile['displayname']) this.displayName = profile['displayname'];
@@ -42,7 +41,7 @@ export default class CommandHandler {
     private async onMessage(roomId: string, ev: any) {
         const event = new MessageEvent(ev);
         if (event.isRedacted) return; // Ignore redacted events that come through
-        if (event.sender === this.userId) return; // Ignore ourselves
+//        if (event.sender === this.userId) return; // Ignore ourselves
         if (event.messageType !== "m.text") return; // Ignore non-text messages
 
         // Ensure that the event is a command before going on. We allow people to ping
@@ -53,7 +52,6 @@ export default class CommandHandler {
 
         // Check to see what the arguments were to the command
         const args = event.textBody.substring(prefixUsed.length).trim().split(' ');
-
         // Try and figure out what command the user ran, defaulting to help
         try {
             if (args[0] === "hello") {
